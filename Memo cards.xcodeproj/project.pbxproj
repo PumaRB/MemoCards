@@ -13,6 +13,10 @@
 		5A345C482AC894A20079105C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A345C462AC894A20079105C /* Main.storyboard */; };
 		5A345C4A2AC894A30079105C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A345C492AC894A30079105C /* Assets.xcassets */; };
 		5A345C4D2AC894A30079105C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A345C4B2AC894A30079105C /* LaunchScreen.storyboard */; };
+		5A345C562AC89C500079105C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5A345C552AC89C500079105C /* Alamofire */; };
+		5A345C5A2AC8A2770079105C /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A345C592AC8A2770079105C /* Translations.swift */; };
+		5A345C5D2AC8C2C20079105C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A345C5C2AC8C2C20079105C /* NetworkManager.swift */; };
+		5A345C5F2AC9D7EA0079105C /* TranslationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A345C5E2AC9D7EA0079105C /* TranslationRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		5A345C492AC894A30079105C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A345C4C2AC894A30079105C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A345C4E2AC894A30079105C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A345C592AC8A2770079105C /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
+		5A345C5C2AC8C2C20079105C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5A345C5E2AC9D7EA0079105C /* TranslationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A345C562AC89C500079105C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +67,23 @@
 				5A345C402AC894A20079105C /* AppDelegate.swift */,
 				5A345C422AC894A20079105C /* SceneDelegate.swift */,
 				5A345C442AC894A20079105C /* ViewController.swift */,
+				5A345C5C2AC8C2C20079105C /* NetworkManager.swift */,
+				5A345C5B2AC8A2800079105C /* Models */,
 				5A345C462AC894A20079105C /* Main.storyboard */,
 				5A345C492AC894A30079105C /* Assets.xcassets */,
 				5A345C4B2AC894A30079105C /* LaunchScreen.storyboard */,
 				5A345C4E2AC894A30079105C /* Info.plist */,
 			);
 			path = "Memo cards";
+			sourceTree = "<group>";
+		};
+		5A345C5B2AC8A2800079105C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A345C592AC8A2770079105C /* Translations.swift */,
+				5A345C5E2AC9D7EA0079105C /* TranslationRequest.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = "Memo cards";
+			packageProductDependencies = (
+				5A345C552AC89C500079105C /* Alamofire */,
+			);
 			productName = "Memo cards";
 			productReference = 5A345C3D2AC894A20079105C /* Memo cards.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 5A345C342AC894A20079105C;
+			packageReferences = (
+				5A345C542AC89C500079105C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 5A345C3E2AC894A20079105C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A345C5A2AC8A2770079105C /* Translations.swift in Sources */,
+				5A345C5F2AC9D7EA0079105C /* TranslationRequest.swift in Sources */,
 				5A345C452AC894A20079105C /* ViewController.swift in Sources */,
+				5A345C5D2AC8C2C20079105C /* NetworkManager.swift in Sources */,
 				5A345C412AC894A20079105C /* AppDelegate.swift in Sources */,
 				5A345C432AC894A20079105C /* SceneDelegate.swift in Sources */,
 			);
@@ -358,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A345C542AC89C500079105C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A345C552AC89C500079105C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A345C542AC89C500079105C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A345C352AC894A20079105C /* Project object */;
 }
